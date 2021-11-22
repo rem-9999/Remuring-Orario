@@ -1,0 +1,44 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Discord Rem Comunity</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<script>
+  const API = "https://discord-web-api.glitch.me/discord/user/863306464915357696";
+  $.getJSON(API)
+    .then(output => {
+      document.getElementById("profile").src = `${output.url}`;
+    });
+</script>
+
+<body>
+  <div id="container">
+    <div id="inviteContainer">
+      <div class="logoContainer"><img class="box" id="guild"
+          src="https://cdn.discordapp.com/icons/899175503565553714/51975d2312a1595966d239db6a5fcb7d.png?size=2048" /><img>
+      </div>
+      <div class="acceptContainer">
+        <form>
+          <h1>Discord Rem Comunity</h1>
+          <div class="serverInfo">
+            <div class="img"><img id="profile"
+                src='https://cdn.discordapp.com/icons/899175503565553714/51975d2312a1595966d239db6a5fcb7d.png'></div>
+            <p><span class="server">! レムリン has invited you to join</span></p>
+          </div>
+          <a href="http://moon9999.xyz/" class="acceptBtn">Accept Invite</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="" src="./js/script.js"></script>
+
+</body>
+
+</html>
