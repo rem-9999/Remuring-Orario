@@ -11,10 +11,17 @@
 </head>
 
 <script>
-  const API = "https://discord-web-api.glitch.me/discord/user/863306464915357696";
+  const API = "http://api.rem9999.xyz/discord/users/863306464915357696";
   $.getJSON(API)
     .then(output => {
-      document.getElementById("profile").src = `${output.url}`;
+      document.getElementById("profile").src = `${output.avatar}`;
+    });
+</script>
+<script>
+  const URL = "http://api.rem9999.xyz/discord/guilds/899175503565553714";
+  $.getJSON(URL)
+    .then(output => {
+      document.getElementById("guild").src = `${output.icon}`;
     });
 </script>
 
@@ -22,14 +29,13 @@
   <div id="container">
     <div id="inviteContainer">
       <div class="logoContainer"><img class="box" id="guild"
-          src="https://cdn.discordapp.com/icons/899175503565553714/51975d2312a1595966d239db6a5fcb7d.png?size=2048" /><img>
+        src=""/><img>
       </div>
       <div class="acceptContainer">
         <form>
           <h1>Discord Rem Comunity</h1>
           <div class="serverInfo">
-            <div class="img"><img id="profile"
-                src='https://cdn.discordapp.com/icons/899175503565553714/51975d2312a1595966d239db6a5fcb7d.png'></div>
+            <div class="img"><img id="profile"></div>
             <p><span class="server">! レムリン has invited you to join</span></p>
           </div>
           <a href="http://218.147.251.17:5858/login" class="acceptBtn">Accept Invite</a>
