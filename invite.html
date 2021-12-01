@@ -13,14 +13,14 @@
 
 <script>
   const API = "http://api.rem9999.xyz/discord/users/863306464915357696";
-  $.ajax(API)
+  $.getJson(API)
     .then(output => {
       document.getElementById("profile").src = `${output.avatar}`;
     });
 </script>
 <script>
   const URL = "http://api.rem9999.xyz/discord/guilds/899175503565553714";
-  $.ajax(URL)
+  $.getJson(URL)
     .then(output => {
       document.getElementById("guild").src = `${output.icon}`;
     });
