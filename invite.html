@@ -1,49 +1,54 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Discord Rem Comunity</title>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
-    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="./css/main.css">
+    <meta charset="UTF-8">
+    <title>Discord Rem Comunity</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <script>
-  const API = "http://api.rem9999.xyz/discord/users/863306464915357696";
-  $.getJSON(API)
-    .then(output => {
-      document.getElementById("profile").src = `${output.avatar}`;
-    });
+    const API = "http://api.rem9999.xyz/discord/users/863306464915357696";
+    $.getJSON(API)
+        .then(output => {
+            document.getElementById("profile").src = `${output.avatar}`;
+        });
 </script>
 <script>
-  const URL = "http://api.rem9999.xyz/discord/guilds/899175503565553714";
-  $.getJSON(URL)
-    .then(output => {
-      document.getElementById("guild").src = `${output.icon}`;
-    });
+    const URL = "http://api.rem9999.xyz/discord/guilds/899175503565553714";
+    $.getJSON(URL)
+        .then(output => {
+            document.getElementById("guild").src = `${output.icon}`;
+        });
+</script>
+
+<script>
+    if (window.location.href.includes("https://")) {
+        location.href('http://rem-guilds.xyz/invite');
+    }
 </script>
 
 <body>
-  <div id="container">
-    <div id="inviteContainer">
-      <div class="logoContainer"><img class="box" id="guild"
-        src=""/><img>
-      </div>
-      <div class="acceptContainer">
-        <form>
-          <h1>Discord Rem Comunity</h1>
-          <div class="serverInfo">
-            <div class="img"><img id="profile"></div>
-            <p><span class="server">! レムリン has invited you to join</span></p>
-          </div>
-          <a href="http://218.147.251.17:5858/login" class="acceptBtn">Accept Invite</a>
-        </form>
-      </div>
+    <div id="container">
+        <div id="inviteContainer">
+            <div class="logoContainer"><img class="box" id="guild" src="" /><img>
+            </div>
+            <div class="acceptContainer">
+                <form>
+                    <h1>Discord Rem Comunity</h1>
+                    <div class="serverInfo">
+                        <div class="img"><img id="profile"></div>
+                        <p><span class="server">! レムリン has invited you to join</span></p>
+                    </div>
+                    <a href="http://218.147.251.17:5858/login" class="acceptBtn">Accept Invite</a>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-  <script type="" src="./js/script.js"></script>
+    <script type="" src="./js/script.js"></script>
 
 </body>
 
