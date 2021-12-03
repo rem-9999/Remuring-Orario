@@ -11,14 +11,14 @@
 </head>
 
 <script>
-    const API = "https://218.147.251.17:2/discord/users/863306464915357696";
+    const API = "https://remapi.xyz:80/discord/users/863306464915357696";
     $.getJSON(API)
         .then(output => {
             document.getElementById("profile").src = `${output.avatar}`;
         });
 </script>
 <script>
-    const URL = "https://218.147.251.17:2/discord/guilds/899175503565553714";
+    const URL = "https://remapi.xyz:80/discord/guilds/899175503565553714";
     $.getJSON(URL)
         .then(output => {
             document.getElementById("guild").src = `${output.icon}`;
